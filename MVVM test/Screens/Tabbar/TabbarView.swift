@@ -21,5 +21,5 @@ struct TabbarView: View {
 }
 
 #Preview {
-    TabbarView(viewModel: TabbarViewModel())
+    TabbarView(viewModel: TabbarViewModel(user: ""))
 }

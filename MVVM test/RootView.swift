@@ -13,13 +13,12 @@ struct RootView: View {
     
     var body: some View {
         ZStack {
-//            NavigationStack(path: $flow.path) {
                 VStack {
                     switch (flow.module) {
                     case .authorization:
                         AuthorizationView(viewModel: AuthorizationViewModel()).transition(.move(edge: .trailing))
-                    case .main:
-                        TabbarView(viewModel: TabbarViewModel())
+                    case .main(let user):
+                        TabbarView(viewModel: TabbarViewModel(user: user))
                     }
                 }.animation(.easeInOut(duration: 0.3), value: flow.cover)
 
@@ -85,7 +84,7 @@ enum CoverRoute: Identifiable {
 
 enum Module {
     case authorization
-    case main
+    case main(user: String)
 }
 
 final class MainRouteFlowModel: BaseFlowModel {

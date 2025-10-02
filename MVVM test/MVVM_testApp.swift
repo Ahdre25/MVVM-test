@@ -11,7 +11,7 @@ import SwiftUI
 struct MVVM_testApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView()
+            RootView().preferredColorScheme(.light) 
         }
     }
 }

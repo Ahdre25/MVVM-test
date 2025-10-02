@@ -8,12 +8,10 @@
 import SwiftUI
 
 enum AuthorizationRoute: Hashable {
-    case detail(id: Int)
-    case settings
+    case code(phone: String)
 }
 
 final class AuthorizationFlowModel: BaseFlowModel {
 
-    func openDetail(id: Int) { path.append(AuthorizationRoute.detail(id: id)) }
-    func openSettings() { path.append(AuthorizationRoute.settings) }
+    func openCode(phone: String) { path.append(AuthorizationRoute.code(phone: phone)) }
 }

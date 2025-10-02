@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E37A85E2E86AE10001523B3 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37A85D2E86AE01001523B3 /* MainButton.swift */; };
+		0E37A8602E86D3B9001523B3 /* Appearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37A85F2E86D3B4001523B3 /* Appearence.swift */; };
 		0E50E9DA2E72F5F000308ADD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0E50E9D92E72F5F000308ADD /* Moya */; };
 		0E6790B72E7AD3990029EA00 /* ProfileFlowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6790B12E7AD3990029EA00 /* ProfileFlowModel.swift */; };
 		0E6790B82E7AD3990029EA00 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6790B32E7AD3990029EA00 /* ProfileService.swift */; };
@@ -53,6 +55,19 @@
 		0E8C03582E742C8500DD4BF4 /* AuthorizationFlowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C03572E742C7D00DD4BF4 /* AuthorizationFlowModel.swift */; };
 		0E8C035A2E7440D500DD4BF4 /* BaseFlowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C03592E7440CE00DD4BF4 /* BaseFlowModel.swift */; };
 		0E91C10F2E730AE2004160D6 /* AuthorizationNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E91C10E2E730ACF004160D6 /* AuthorizationNetwork.swift */; };
+		0EABEB8A2E8A973F00A33760 /* AuthorizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB892E8A95E200A33760 /* AuthorizationModel.swift */; };
+		0EABEB8D2E8AAAC100A33760 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB8C2E8AAAB900A33760 /* MainTextField.swift */; };
+		0EABEB8F2E8AC69F00A33760 /* PhoneField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB8E2E8AC5A200A33760 /* PhoneField.swift */; };
+		0EABEB912E8BEDDC00A33760 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB902E8BEDCF00A33760 /* Checkbox.swift */; };
+		0EABEB932E8C138A00A33760 /* SegmentedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB922E8C12FC00A33760 /* SegmentedField.swift */; };
+		0EABEB9A2E8C152A00A33760 /* CodeVerificationNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB952E8C152A00A33760 /* CodeVerificationNetwork.swift */; };
+		0EABEB9B2E8C152A00A33760 /* CodeVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB972E8C152A00A33760 /* CodeVerificationView.swift */; };
+		0EABEB9C2E8C152A00A33760 /* CodeVerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB962E8C152A00A33760 /* CodeVerificationService.swift */; };
+		0EABEB9D2E8C152A00A33760 /* CodeVerificationFlowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB942E8C152A00A33760 /* CodeVerificationFlowModel.swift */; };
+		0EABEB9E2E8C152A00A33760 /* CodeVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB982E8C152A00A33760 /* CodeVerificationViewModel.swift */; };
+		0EABEBA02E8C1EFD00A33760 /* CodeVerificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB9F2E8C1EF100A33760 /* CodeVerificationModel.swift */; };
+		0EABEBA32E8D801900A33760 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEBA22E8D801400A33760 /* TimerManager.swift */; };
+		0EABEBA62E8EBFDA00A33760 /* LoaderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEBA52E8EBFD800A33760 /* LoaderModifier.swift */; };
 		0EB828922E745EDC00A4A7CF /* PaymentNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8288D2E745EDC00A4A7CF /* PaymentNetwork.swift */; };
 		0EB828932E745EDC00A4A7CF /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8288E2E745EDC00A4A7CF /* PaymentService.swift */; };
 		0EB828942E745EDC00A4A7CF /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8288F2E745EDC00A4A7CF /* PaymentView.swift */; };
@@ -66,6 +81,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E37A85D2E86AE01001523B3 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		0E37A85F2E86D3B4001523B3 /* Appearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearence.swift; sourceTree = "<group>"; };
 		0E6790B12E7AD3990029EA00 /* ProfileFlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlowModel.swift; sourceTree = "<group>"; };
 		0E6790B22E7AD3990029EA00 /* ProfileNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNetwork.swift; sourceTree = "<group>"; };
 		0E6790B32E7AD3990029EA00 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
@@ -112,6 +129,19 @@
 		0E8C03572E742C7D00DD4BF4 /* AuthorizationFlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationFlowModel.swift; sourceTree = "<group>"; };
 		0E8C03592E7440CE00DD4BF4 /* BaseFlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFlowModel.swift; sourceTree = "<group>"; };
 		0E91C10E2E730ACF004160D6 /* AuthorizationNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationNetwork.swift; sourceTree = "<group>"; };
+		0EABEB892E8A95E200A33760 /* AuthorizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationModel.swift; sourceTree = "<group>"; };
+		0EABEB8C2E8AAAB900A33760 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
+		0EABEB8E2E8AC5A200A33760 /* PhoneField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneField.swift; sourceTree = "<group>"; };
+		0EABEB902E8BEDCF00A33760 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		0EABEB922E8C12FC00A33760 /* SegmentedField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedField.swift; sourceTree = "<group>"; };
+		0EABEB942E8C152A00A33760 /* CodeVerificationFlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationFlowModel.swift; sourceTree = "<group>"; };
+		0EABEB952E8C152A00A33760 /* CodeVerificationNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationNetwork.swift; sourceTree = "<group>"; };
+		0EABEB962E8C152A00A33760 /* CodeVerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationService.swift; sourceTree = "<group>"; };
+		0EABEB972E8C152A00A33760 /* CodeVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationView.swift; sourceTree = "<group>"; };
+		0EABEB982E8C152A00A33760 /* CodeVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationViewModel.swift; sourceTree = "<group>"; };
+		0EABEB9F2E8C1EF100A33760 /* CodeVerificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationModel.swift; sourceTree = "<group>"; };
+		0EABEBA22E8D801400A33760 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		0EABEBA52E8EBFD800A33760 /* LoaderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderModifier.swift; sourceTree = "<group>"; };
 		0EB8288C2E745EDC00A4A7CF /* PaymentFlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFlowModel.swift; sourceTree = "<group>"; };
 		0EB8288D2E745EDC00A4A7CF /* PaymentNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentNetwork.swift; sourceTree = "<group>"; };
 		0EB8288E2E745EDC00A4A7CF /* PaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
@@ -136,6 +166,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E37A85B2E86ADE1001523B3 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				0EABEBA42E8EBFD100A33760 /* Loaders */,
+				0EABEB8B2E8AAAAE00A33760 /* TextFields */,
+				0E37A85C2E86ADED001523B3 /* Buttons */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		0E37A85C2E86ADED001523B3 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				0EABEB902E8BEDCF00A33760 /* Checkbox.swift */,
+				0E37A85D2E86AE01001523B3 /* MainButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		0E50E9D82E72F5F000308ADD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +263,7 @@
 				0E6790CC2E7AFA5D0029EA00 /* ProfileStep2 */,
 				0E6790D92E7AFAD00029EA00 /* ProfileStep3 */,
 				0E6790E42E7D987C0029EA00 /* InnerProfileStep */,
+				0EABEB992E8C152A00A33760 /* CodeVerification */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -276,6 +326,8 @@
 		0E85A15B2E71C781006490AE /* MVVM test */ = {
 			isa = PBXGroup;
 			children = (
+				0EABEBA12E8D800B00A33760 /* Managers */,
+				0E37A85B2E86ADE1001523B3 /* CustomViews */,
 				0E7A134E2E7224F700A31B00 /* Models */,
 				0E85A1622E71D4E6006490AE /* Architecture */,
 				0E7A13472E7224C000A31B00 /* Screens */,
@@ -290,6 +342,7 @@
 		0E85A1622E71D4E6006490AE /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				0E37A85F2E86D3B4001523B3 /* Appearence.swift */,
 				0E8C03592E7440CE00DD4BF4 /* BaseFlowModel.swift */,
 				0E7A13412E72233000A31B00 /* BaseService.swift */,
 				0E85A1632E71F25B006490AE /* BaseViewModel.swift */,
@@ -301,6 +354,7 @@
 		0E8C03562E733F7A00DD4BF4 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				0EABEB892E8A95E200A33760 /* AuthorizationModel.swift */,
 				0E8C03572E742C7D00DD4BF4 /* AuthorizationFlowModel.swift */,
 				0E91C10E2E730ACF004160D6 /* AuthorizationNetwork.swift */,
 				0E7A134C2E7224E700A31B00 /* AuthorizationService.swift */,
@@ -308,6 +362,45 @@
 				0E7A13482E7224D200A31B00 /* AuthorizationView.swift */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		0EABEB8B2E8AAAAE00A33760 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				0EABEB922E8C12FC00A33760 /* SegmentedField.swift */,
+				0EABEB8E2E8AC5A200A33760 /* PhoneField.swift */,
+				0EABEB8C2E8AAAB900A33760 /* MainTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		0EABEB992E8C152A00A33760 /* CodeVerification */ = {
+			isa = PBXGroup;
+			children = (
+				0EABEB9F2E8C1EF100A33760 /* CodeVerificationModel.swift */,
+				0EABEB942E8C152A00A33760 /* CodeVerificationFlowModel.swift */,
+				0EABEB952E8C152A00A33760 /* CodeVerificationNetwork.swift */,
+				0EABEB962E8C152A00A33760 /* CodeVerificationService.swift */,
+				0EABEB972E8C152A00A33760 /* CodeVerificationView.swift */,
+				0EABEB982E8C152A00A33760 /* CodeVerificationViewModel.swift */,
+			);
+			path = CodeVerification;
+			sourceTree = "<group>";
+		};
+		0EABEBA12E8D800B00A33760 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0EABEBA22E8D801400A33760 /* TimerManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0EABEBA42E8EBFD100A33760 /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				0EABEBA52E8EBFD800A33760 /* LoaderModifier.swift */,
+			);
+			path = Loaders;
 			sourceTree = "<group>";
 		};
 		0EB828912E745EDC00A4A7CF /* Payment */ = {
@@ -411,10 +504,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EABEB912E8BEDDC00A33760 /* Checkbox.swift in Sources */,
 				0E91C10F2E730AE2004160D6 /* AuthorizationNetwork.swift in Sources */,
 				0E6790E52E7D987C0029EA00 /* InnerProfileStepViewModel.swift in Sources */,
 				0E6790E62E7D987C0029EA00 /* InnerProfileStepService.swift in Sources */,
 				0E6790E72E7D987C0029EA00 /* InnerProfileStepView.swift in Sources */,
+				0EABEB8F2E8AC69F00A33760 /* PhoneField.swift in Sources */,
 				0E6790E82E7D987C0029EA00 /* InnerProfileStepFlowModel.swift in Sources */,
 				0E6790E92E7D987C0029EA00 /* InnerProfileStepNetwork.swift in Sources */,
 				0E7A134B2E7224E400A31B00 /* AuthorizationViewModel.swift in Sources */,
@@ -424,15 +519,26 @@
 				0E6790CF2E7AFA5D0029EA00 /* ProfileStep2View.swift in Sources */,
 				0E6790D02E7AFA5D0029EA00 /* ProfileStep2ViewModel.swift in Sources */,
 				0E6790D12E7AFA5D0029EA00 /* ProfileStep2FlowModel.swift in Sources */,
+				0EABEB8A2E8A973F00A33760 /* AuthorizationModel.swift in Sources */,
 				0E6790DA2E7AFAD00029EA00 /* ProfileStep3Network.swift in Sources */,
 				0E6790DB2E7AFAD00029EA00 /* ProfileStep3Service.swift in Sources */,
 				0E6790DC2E7AFAD00029EA00 /* ProfileStep3View.swift in Sources */,
 				0E6790DD2E7AFAD00029EA00 /* ProfileStep3FlowModel.swift in Sources */,
 				0E6790DE2E7AFAD00029EA00 /* ProfileStep3ViewModel.swift in Sources */,
+				0E37A8602E86D3B9001523B3 /* Appearence.swift in Sources */,
 				0E7A13592E72E56100A31B00 /* BaseNetworkModels.swift in Sources */,
 				0E6790B72E7AD3990029EA00 /* ProfileFlowModel.swift in Sources */,
 				0E6790B82E7AD3990029EA00 /* ProfileService.swift in Sources */,
+				0EABEB9A2E8C152A00A33760 /* CodeVerificationNetwork.swift in Sources */,
+				0EABEB9B2E8C152A00A33760 /* CodeVerificationView.swift in Sources */,
+				0EABEB9C2E8C152A00A33760 /* CodeVerificationService.swift in Sources */,
+				0EABEB9D2E8C152A00A33760 /* CodeVerificationFlowModel.swift in Sources */,
+				0EABEBA02E8C1EFD00A33760 /* CodeVerificationModel.swift in Sources */,
+				0EABEBA32E8D801900A33760 /* TimerManager.swift in Sources */,
+				0EABEB9E2E8C152A00A33760 /* CodeVerificationViewModel.swift in Sources */,
 				0E6790B92E7AD3990029EA00 /* ProfileViewModel.swift in Sources */,
+				0EABEB8D2E8AAAC100A33760 /* MainTextField.swift in Sources */,
+				0EABEB932E8C138A00A33760 /* SegmentedField.swift in Sources */,
 				0E6790BA2E7AD3990029EA00 /* ProfileView.swift in Sources */,
 				0E6790BB2E7AD3990029EA00 /* ProfileNetwork.swift in Sources */,
 				0E7A135A2E72E56100A31B00 /* VerbosePlugin.swift in Sources */,
@@ -440,6 +546,7 @@
 				0EB828932E745EDC00A4A7CF /* PaymentService.swift in Sources */,
 				0EB828942E745EDC00A4A7CF /* PaymentView.swift in Sources */,
 				0EB828952E745EDC00A4A7CF /* PaymentFlowModel.swift in Sources */,
+				0EABEBA62E8EBFDA00A33760 /* LoaderModifier.swift in Sources */,
 				0EB828962E745EDC00A4A7CF /* PaymentViewModel.swift in Sources */,
 				0E7A135B2E72E56100A31B00 /* BaseTarget.swift in Sources */,
 				0E7A135C2E72E56100A31B00 /* API.swift in Sources */,
@@ -449,6 +556,7 @@
 				0EBC497F2E7ABC6A00B87A25 /* TabbarView.swift in Sources */,
 				0EBC49802E7ABC6A00B87A25 /* TabbarFlowModel.swift in Sources */,
 				0EBC49812E7ABC6A00B87A25 /* TabbarService.swift in Sources */,
+				0E37A85E2E86AE10001523B3 /* MainButton.swift in Sources */,
 				0EBC49822E7ABC6A00B87A25 /* TabbarNetwork.swift in Sources */,
 				0E7A135F2E72E56100A31B00 /* PaginationRequest.swift in Sources */,
 				0E7A13602E72E56100A31B00 /* BaseNetwork.swift in Sources */,

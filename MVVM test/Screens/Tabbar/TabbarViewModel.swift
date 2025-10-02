@@ -9,7 +9,7 @@ import SwiftUI
 
 final class TabbarViewModel: BaseViewModel {
     
-    let service: TabbarService!
+    let service: TabbarService
     
     
     var onAuthorizationSuccess: (() -> Void)?
@@ -21,7 +21,7 @@ final class TabbarViewModel: BaseViewModel {
     }
     
     
-    override init() {
+    init(user: String) {
         service = TabbarService()
         super.init()
         service.delegate = self
