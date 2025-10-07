@@ -27,8 +27,8 @@ struct AuthorizationView: View {
                 PhoneTextField(title: "(927) 999 - 99 - 99", text: $viewModel.login)
                 Spacer()
                 VStack(alignment: .leading) {
-                    Checkbox(text: "Я принимаю Условия пользовательского соглашения", isChecked: $viewModel.isTermsChecked, linkText: "Условия пользовательского соглашения", link: URL(string: "https://google.com"))
-                    Checkbox(text: "Я даю свое согласие на Обработку персональных данных", isChecked: $viewModel.isPolicyChecked, linkText: "Обработку персональных данных", link: URL(string: "https://google.com"))
+                    Checkbox(text: "Я принимаю Условия пользовательского соглашения", isChecked: $viewModel.isTermsChecked, linkText: "Условия пользовательского соглашения", link: URL(string: "https://google.ru"))
+                    Checkbox(text: "Я даю свое согласие на Обработку персональных данных", isChecked: $viewModel.isPolicyChecked, linkText: "Обработку персональных данных", link: URL(string: "https://google.ru"))
                 }
                 MainButton(title: "Войти") {
                     viewModel.authorizationTap()

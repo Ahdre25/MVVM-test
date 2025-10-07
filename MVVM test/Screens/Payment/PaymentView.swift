@@ -8,33 +8,36 @@ struct PaymentView: View {
     @StateObject var viewModel: PaymentViewModel
 
     var body: some View {
-//        NavigationStack(path: $flow.path) {
             VStack {
-                TextField("Логин", text: $viewModel.username)
-                TextField("Пароль", text: $viewModel.password)
-                Button("Войти") {
-//                    flow.openSettings()
-                    viewModel.authorizationTap()
+                List{
+                    if viewModel.isInitialLoading {
+                        ForEach(1...3, id: \.self) { item in
+                            PaymentListCell(item: nil)
+                            
+                        }.listStyle(.plain)
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.clear).transition(.opacity)
+                    } else {
+                        ForEach(viewModel.shopItems, id: \.id) { item in
+                            PaymentListCell(item: item)
+                        }.listStyle(.plain)
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.clear)
+                    }
                 }
                 
                 
-            }.padding().lineSpacing(18).background(Color.red).cornerRadius(20)
-//        }.navigationDestination(for: PaymentRoute.self, destination: { route in
-//            switch(route) {
-//            case .detail(id: let id): 
-//                PaymentView(viewModel: PaymentViewModel())
-//            }
-            
-            
-//        })
+            }
+
         .onAppear {
             viewModel.onAuthorizationSuccess = {
                 flow.openDetail(id: 0)
             }
+            viewModel.loadItems()
         }
     }
 }
 
-//#Preview {
-//    PaymentView(viewModel: PaymentViewModel())
-//}
+#Preview {
+    PaymentView(viewModel: PaymentViewModel())
+}

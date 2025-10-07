@@ -68,6 +68,11 @@
 		0EABEBA02E8C1EFD00A33760 /* CodeVerificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEB9F2E8C1EF100A33760 /* CodeVerificationModel.swift */; };
 		0EABEBA32E8D801900A33760 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEBA22E8D801400A33760 /* TimerManager.swift */; };
 		0EABEBA62E8EBFDA00A33760 /* LoaderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEBA52E8EBFD800A33760 /* LoaderModifier.swift */; };
+		0EABEBA92E954E6600A33760 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0EABEBA82E954E6600A33760 /* Kingfisher */; };
+		0EABEBAC2E954E7D00A33760 /* ShimmerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEBAB2E954E7300A33760 /* ShimmerImage.swift */; };
+		0EABEBAF2E95543800A33760 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEBAE2E95543500A33760 /* ShimmerView.swift */; };
+		0EABEBB12E95562C00A33760 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEBB02E95562300A33760 /* PaymentModel.swift */; };
+		0EABEBB72E955FBC00A33760 /* PaymentListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABEBB62E955FAD00A33760 /* PaymentListCell.swift */; };
 		0EB828922E745EDC00A4A7CF /* PaymentNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8288D2E745EDC00A4A7CF /* PaymentNetwork.swift */; };
 		0EB828932E745EDC00A4A7CF /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8288E2E745EDC00A4A7CF /* PaymentService.swift */; };
 		0EB828942E745EDC00A4A7CF /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8288F2E745EDC00A4A7CF /* PaymentView.swift */; };
@@ -142,6 +147,10 @@
 		0EABEB9F2E8C1EF100A33760 /* CodeVerificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationModel.swift; sourceTree = "<group>"; };
 		0EABEBA22E8D801400A33760 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		0EABEBA52E8EBFD800A33760 /* LoaderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderModifier.swift; sourceTree = "<group>"; };
+		0EABEBAB2E954E7300A33760 /* ShimmerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerImage.swift; sourceTree = "<group>"; };
+		0EABEBAE2E95543500A33760 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
+		0EABEBB02E95562300A33760 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		0EABEBB62E955FAD00A33760 /* PaymentListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListCell.swift; sourceTree = "<group>"; };
 		0EB8288C2E745EDC00A4A7CF /* PaymentFlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFlowModel.swift; sourceTree = "<group>"; };
 		0EB8288D2E745EDC00A4A7CF /* PaymentNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentNetwork.swift; sourceTree = "<group>"; };
 		0EB8288E2E745EDC00A4A7CF /* PaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
@@ -159,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EABEBA92E954E6600A33760 /* Kingfisher in Frameworks */,
 				0E50E9DA2E72F5F000308ADD /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +179,9 @@
 		0E37A85B2E86ADE1001523B3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				0EABEBB42E955F8D00A33760 /* Lists */,
+				0EABEBAD2E95542F00A33760 /* Views */,
+				0EABEBAA2E954E6E00A33760 /* Images */,
 				0EABEBA42E8EBFD100A33760 /* Loaders */,
 				0EABEB8B2E8AAAAE00A33760 /* TextFields */,
 				0E37A85C2E86ADED001523B3 /* Buttons */,
@@ -268,13 +281,6 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		0E7A134E2E7224F700A31B00 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		0E7A13512E72E56100A31B00 /* Pagination */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,7 +334,6 @@
 			children = (
 				0EABEBA12E8D800B00A33760 /* Managers */,
 				0E37A85B2E86ADE1001523B3 /* CustomViews */,
-				0E7A134E2E7224F700A31B00 /* Models */,
 				0E85A1622E71D4E6006490AE /* Architecture */,
 				0E7A13472E7224C000A31B00 /* Screens */,
 				0E85A1572E71C781006490AE /* Preview Content */,
@@ -403,9 +408,42 @@
 			path = Loaders;
 			sourceTree = "<group>";
 		};
+		0EABEBAA2E954E6E00A33760 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0EABEBAB2E954E7300A33760 /* ShimmerImage.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		0EABEBAD2E95542F00A33760 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0EABEBAE2E95543500A33760 /* ShimmerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0EABEBB42E955F8D00A33760 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				0EABEBB52E955F9E00A33760 /* PaymentList */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		0EABEBB52E955F9E00A33760 /* PaymentList */ = {
+			isa = PBXGroup;
+			children = (
+				0EABEBB62E955FAD00A33760 /* PaymentListCell.swift */,
+			);
+			path = PaymentList;
+			sourceTree = "<group>";
+		};
 		0EB828912E745EDC00A4A7CF /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				0EABEBB02E95562300A33760 /* PaymentModel.swift */,
 				0EB8288C2E745EDC00A4A7CF /* PaymentFlowModel.swift */,
 				0EB8288D2E745EDC00A4A7CF /* PaymentNetwork.swift */,
 				0EB8288E2E745EDC00A4A7CF /* PaymentService.swift */,
@@ -445,6 +483,7 @@
 			name = "MVVM test";
 			packageProductDependencies = (
 				0E50E9D92E72F5F000308ADD /* Moya */,
+				0EABEBA82E954E6600A33760 /* Kingfisher */,
 			);
 			productName = "MVVM test";
 			productReference = 0E85A1452E71C777006490AE /* MVVM test.app */;
@@ -476,6 +515,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				0E50E9D72E72F3A700308ADD /* XCRemoteSwiftPackageReference "Moya" */,
+				0EABEBA72E954E6600A33760 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0E85A1462E71C777006490AE /* Products */;
@@ -504,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EABEBAC2E954E7D00A33760 /* ShimmerImage.swift in Sources */,
 				0EABEB912E8BEDDC00A33760 /* Checkbox.swift in Sources */,
 				0E91C10F2E730AE2004160D6 /* AuthorizationNetwork.swift in Sources */,
 				0E6790E52E7D987C0029EA00 /* InnerProfileStepViewModel.swift in Sources */,
@@ -526,6 +567,7 @@
 				0E6790DD2E7AFAD00029EA00 /* ProfileStep3FlowModel.swift in Sources */,
 				0E6790DE2E7AFAD00029EA00 /* ProfileStep3ViewModel.swift in Sources */,
 				0E37A8602E86D3B9001523B3 /* Appearence.swift in Sources */,
+				0EABEBB12E95562C00A33760 /* PaymentModel.swift in Sources */,
 				0E7A13592E72E56100A31B00 /* BaseNetworkModels.swift in Sources */,
 				0E6790B72E7AD3990029EA00 /* ProfileFlowModel.swift in Sources */,
 				0E6790B82E7AD3990029EA00 /* ProfileService.swift in Sources */,
@@ -544,6 +586,7 @@
 				0E7A135A2E72E56100A31B00 /* VerbosePlugin.swift in Sources */,
 				0EB828922E745EDC00A4A7CF /* PaymentNetwork.swift in Sources */,
 				0EB828932E745EDC00A4A7CF /* PaymentService.swift in Sources */,
+				0EABEBB72E955FBC00A33760 /* PaymentListCell.swift in Sources */,
 				0EB828942E745EDC00A4A7CF /* PaymentView.swift in Sources */,
 				0EB828952E745EDC00A4A7CF /* PaymentFlowModel.swift in Sources */,
 				0EABEBA62E8EBFDA00A33760 /* LoaderModifier.swift in Sources */,
@@ -555,6 +598,7 @@
 				0EBC497E2E7ABC6A00B87A25 /* TabbarViewModel.swift in Sources */,
 				0EBC497F2E7ABC6A00B87A25 /* TabbarView.swift in Sources */,
 				0EBC49802E7ABC6A00B87A25 /* TabbarFlowModel.swift in Sources */,
+				0EABEBAF2E95543800A33760 /* ShimmerView.swift in Sources */,
 				0EBC49812E7ABC6A00B87A25 /* TabbarService.swift in Sources */,
 				0E37A85E2E86AE10001523B3 /* MainButton.swift in Sources */,
 				0EBC49822E7ABC6A00B87A25 /* TabbarNetwork.swift in Sources */,
@@ -787,6 +831,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		0EABEBA72E954E6600A33760 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -794,6 +846,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E50E9D72E72F3A700308ADD /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		0EABEBA82E954E6600A33760 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EABEBA72E954E6600A33760 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

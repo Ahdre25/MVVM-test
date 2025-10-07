@@ -11,13 +11,18 @@ final class PaymentViewModel: BaseViewModel {
     
     let service: PaymentService!
     
+    @Published var shopItems: [ShopItem] = []
+    @Published var isInitialLoading: Bool = true
     
     var onAuthorizationSuccess: (() -> Void)?
-    @Published var username: String = ""
-    @Published var password: String = ""
+    
     
     func authorizationTap(){
         service.authorize()
+    }
+    
+    func loadItems(){
+        service.loadShopItems()
     }
     
     
@@ -31,6 +36,11 @@ final class PaymentViewModel: BaseViewModel {
 }
 
 extension PaymentViewModel: PaymentServiceDelegate {
+    func shopItemsLoaded(_ items: [ShopItem]) {
+        shopItems = items
+        isInitialLoading = false
+    }
+    
     func authorizationSuccess() {
         print("flow")
         onAuthorizationSuccess?()

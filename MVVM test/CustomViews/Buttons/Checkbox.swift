@@ -42,7 +42,7 @@ struct Checkbox: View {
 
 #Preview {
     @Previewable @State var isChecked = false
-    Checkbox(text: "Я принимаю Условия пользовательского соглашения", isChecked: $isChecked, linkText: "Условия пользовательского соглашения", link: URL(string: "https://google.com"))
+    Checkbox(text: "Я принимаю Условия пользовательского соглашения", isChecked: $isChecked, linkText: "Условия пользовательского соглашения", link: URL(string: "https://google.ru"))
         .padding(16)
 }
 
