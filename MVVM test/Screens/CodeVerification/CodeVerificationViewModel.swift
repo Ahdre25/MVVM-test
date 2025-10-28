@@ -50,7 +50,6 @@ final class CodeVerificationViewModel: BaseViewModel {
     
     func bindValues() {
         $code.filter({$0.count == 6}).sink { value in
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 if self.code == "000000" {
                     self.authorizationSuccess()

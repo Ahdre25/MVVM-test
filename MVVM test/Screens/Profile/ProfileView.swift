@@ -4,7 +4,7 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    @EnvironmentObject var flow: MainRouteFlowModel
+    @EnvironmentObject var flow: RootFlowModel
     @StateObject var selfFlow: ProfileFlowModel = ProfileFlowModel()
     @StateObject var viewModel: ProfileViewModel
 

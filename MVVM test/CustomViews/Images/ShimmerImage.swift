@@ -15,14 +15,9 @@ struct ShimmeringImage: View {
         KFImage(URL(string: url ?? ""))
             .placeholder {
                 ShimmerView()
-                    .cornerRadius(12)
             }
         
             .resizable()
-        
-            .aspectRatio(contentMode: .fill)
-            
-            .padding(.horizontal)
             .clipped()
         
     }
@@ -33,7 +28,5 @@ struct ShimmeringImage: View {
 
 #Preview {
     ShimmerView()
-        .cornerRadius(12)
-        .padding(.horizontal)
     ShimmeringImage(url: "https://picsum.photos/200/")
 }

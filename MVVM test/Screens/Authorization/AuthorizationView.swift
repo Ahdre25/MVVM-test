@@ -13,7 +13,7 @@ import SwiftUI
 
 struct AuthorizationView: View {
     
-    @EnvironmentObject var rootFlow: MainRouteFlowModel
+    @EnvironmentObject var rootFlow: RootFlowModel
     @StateObject var flow: AuthorizationFlowModel = AuthorizationFlowModel()
     @ObservedObject var viewModel: AuthorizationViewModel
     var body: some View {
@@ -45,7 +45,6 @@ struct AuthorizationView: View {
             .onAppear {
                 viewModel.onAuthorizationSuccess = {
                     withAnimation {
-                        
                         flow.openCode(phone: viewModel.login)
                     }
                     

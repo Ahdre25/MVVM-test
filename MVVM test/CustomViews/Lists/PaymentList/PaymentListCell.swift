@@ -10,11 +10,17 @@ import SwiftUI
 struct PaymentListCell: View {
     
     @State var item: ShopItem?
+    var onLikeTap: (() -> Void)
     
     var body: some View {
         
-        HStack {
-            ShimmeringImage(url: item?.imageLink).frame(width: 150, height: 150).cornerRadius(12)
+        VStack {
+            ZStack(alignment: .topTrailing) {
+                ShimmeringImage(url: item?.imageLink).cornerRadius(12)
+                if let item = item {
+                    LikeButton(isLiked: item.isLiked, onTap: onLikeTap).padding()
+                }
+            }.aspectRatio(3/4, contentMode: .fill)
             VStack(alignment: .leading) {
                 Spacer().frame(height: 10)
                 if let item = item {
@@ -24,20 +30,29 @@ struct PaymentListCell: View {
                         .font(.subheadline)
                     Spacer()
                 } else {
-                    ShimmerView().frame(width: 200, height: 15)
-                    ShimmerView().frame(width: 100, height: 15)
+                    ShimmerView()
+                    ShimmerView()
                     Spacer()
                     
                 }
             }
             Spacer()
-        }.frame(height: 150).padding(.horizontal)
+        }
     }
 }
 
 
 #Preview {
-    let item = ShopItem(id: 0, name: "sfsfsfsd", price: 0.0, imageLink: "")
-    PaymentListCell(item: item)
-    PaymentListCell(item: nil)
+    
+    let item = ShopItem(id: 0, name: "sfsfsfsd", price: 0.0, imageLink: "", isLiked: false)
+    VStack {
+        HStack {
+            PaymentListCell(item: item, onLikeTap: {
+                
+            })
+            PaymentListCell(item: nil, onLikeTap: {
+                
+            })
+        }
+    }.padding()
 }

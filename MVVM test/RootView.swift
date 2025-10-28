@@ -9,40 +9,37 @@ import SwiftUI
 
 struct RootView: View {
     
-    @ObservedObject var flow: MainRouteFlowModel = MainRouteFlowModel()
+    @ObservedObject var flow: RootFlowModel = RootFlowModel()
     
     var body: some View {
         ZStack {
-                VStack {
-                    switch (flow.module) {
-                    case .authorization:
-                        AuthorizationView(viewModel: AuthorizationViewModel()).transition(.move(edge: .trailing))
-                    case .main(let user):
-                        TabbarView(viewModel: TabbarViewModel(user: user))
-                    }
-                }.animation(.easeInOut(duration: 0.3), value: flow.cover)
-
-                //            .sheet(item: $flow.sheet) { sheet in
-                //                                switch sheet {
-                //                                case .filter:
-                //                                    FilterSheet()
-                //                                        .presentationDetents([.medium, .large])
-                //                                        .interactiveDismissDisabled(false)
-                //                                case .user(let user):
-                //                                    UserSheet(user: user)
-                //                                }
-                //                            }
+            VStack {
+                switch (flow.module) {
+                case .authorization:
+                    AuthorizationView(viewModel: AuthorizationViewModel())
+                case .main(let user):
+                    TabbarView(viewModel: TabbarViewModel(user: user))
+                }
+            }.animation(.easeInOut(duration: 0.3), value: flow.cover)
+            
+            //            .sheet(item: $flow.sheet) { sheet in
+            //                                switch sheet {
+            //                                case .filter:
+            //                                    FilterSheet()
+            //                                        .presentationDetents([.medium, .large])
+            //                                        .interactiveDismissDisabled(false)
+            //                                case .user(let user):
+            //                                    UserSheet(user: user)
+            //                                }
+            //                            }
             if flow.cover == .profileEdit {
                 ProfileStep1View(viewModel: ProfileStep1ViewModel()).transition(.move(edge: .trailing)).zIndex(1)
             }
-            }
-            
-            .environmentObject(flow)
-            .animation(.easeInOut(duration: 0.3), value: flow.cover)
-                 // как push
-                
-//        }
-       
+        }
+        
+        .environmentObject(flow)
+        .animation(.easeInOut(duration: 0.3), value: flow.cover)
+        
     }
         
         
@@ -54,20 +51,18 @@ struct RootView: View {
 }
 
 
-enum MainRoute: Hashable {
+enum RootRoute: Hashable {
     
     case detail
     case settings
 }
 
 enum SheetRoute: Identifiable {
-    case filter
-    case user
+    case citySearch(cities: [String])
     
     var id: String {
         switch self {
-        case .filter: return "filter"
-        case .user: return "user_"
+        case .citySearch: return "citySearch_"
         }
     }
 }
@@ -87,10 +82,10 @@ enum Module {
     case main(user: String)
 }
 
-final class MainRouteFlowModel: BaseFlowModel {
+final class RootFlowModel: BaseFlowModel {
     
     @Published var module: Module = .authorization
     
-    func openDetail(id: Int) { path.append(MainRoute.detail) }
-    func openSettings() { path.append(MainRoute.settings) }
+    func openDetail(id: Int) { path.append(RootRoute.detail) }
+    func openSettings() { path.append(RootRoute.settings) }
 }

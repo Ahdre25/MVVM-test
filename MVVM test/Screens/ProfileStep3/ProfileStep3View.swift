@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct ProfileStep3View: View {
-    @EnvironmentObject var flow: MainRouteFlowModel
+    @EnvironmentObject var flow: RootFlowModel
     @EnvironmentObject var selfflow: ProfileStep1FlowModel
     @StateObject var viewModel: ProfileStep3ViewModel
 

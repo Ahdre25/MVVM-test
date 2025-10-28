@@ -22,7 +22,7 @@ struct MainButton: View {
 
 #Preview {
     MainButton(title: "Войти", action: {}).auth(isActive: true)
-    MainButton(title: "Войти", action: {}).auth(isActive: false).padding(.horizontal, 16)
+    MainButton(title: "Войти", action: {}).auth(isActive: false)
 }
 
 

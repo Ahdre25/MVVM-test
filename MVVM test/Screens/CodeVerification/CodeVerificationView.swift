@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct CodeVerificationView: View {
-    @EnvironmentObject var rootFlow: MainRouteFlowModel
+    @EnvironmentObject var rootFlow: RootFlowModel
     @EnvironmentObject var flow: AuthorizationFlowModel
     @StateObject var viewModel: CodeVerificationViewModel
     
