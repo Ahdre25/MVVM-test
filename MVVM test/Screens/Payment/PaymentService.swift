@@ -17,7 +17,7 @@ final class PaymentService: BaseService {
     let network: PaymentNetwork = PaymentNetwork()
     
     func loadShopItems() {
-        let items = [ShopItem(id: 0, name: "Товар 1", price: 1000, imageLink: "https://picsum.photos/600/"), ShopItem(id: 1, name: "Товар 2", price: 2000, imageLink: "https://picsum.photos/600//"), ShopItem(id: 2, name: "Товар 3", price: 3000, imageLink: "https://picsum.photos/600///")]
+        let items = [ShopItem(id: UUID(), name: "Товар 1", price: 1000, imageLink: "https://picsum.photos/600/"), ShopItem(id: UUID(), name: "Товар 2", price: 2000, imageLink: "https://picsum.photos/600//"), ShopItem(id: UUID(), name: "Товар 3", price: 3000, imageLink: "https://picsum.photos/600///")]
         DispatchQueue.global().asyncAfter(deadline: .now() + 2, execute: {
             self.delegate.shopItemsLoaded(items)
         })

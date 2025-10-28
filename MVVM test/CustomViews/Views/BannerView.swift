@@ -12,15 +12,15 @@ struct BannerCarouselView: View {
     @State private var timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     
     let banners = [
-        "https://picsum.photos/600/",
-        "https://picsum.photos/600/",
-        "https://picsum.photos/600/",
-        "https://picsum.photos/600/",
-        "https://picsum.photos/600/",
-        "https://picsum.photos/600/",
-        "https://picsum.photos/600/",
-        "https://picsum.photos/600/",
-        "https://picsum.photos/600/"
+        "https://picsum.photos/600?random=1",
+        "https://picsum.photos/600?random=2",
+        "https://picsum.photos/600?random=3",
+        "https://picsum.photos/600?random=4",
+        "https://picsum.photos/600?random=5",
+        "https://picsum.photos/600?random=6",
+        "https://picsum.photos/600?random=7",
+        "https://picsum.photos/600?random=8",
+        "https://picsum.photos/600?random=9"
     ]
     
     @State private var currentPage = 0

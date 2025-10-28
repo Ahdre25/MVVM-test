@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct RadioListView: View {
-    // Полный список элементов
     let items: [String]
     
-    // Выбранный элемент
     @Binding var selectedItem: String
     
-    // Текст поиска
     @State private var searchText: String = ""
     
-    // Отфильтрованный список
     var filteredItems: [String] {
         if searchText.isEmpty {
             return items
@@ -29,7 +25,6 @@ struct RadioListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                // Поле поиска
                 TextField("Поиск...", text: $searchText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)

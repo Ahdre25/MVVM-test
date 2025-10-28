@@ -45,7 +45,7 @@ struct MainView: View {
             }
         }.navigationDestination(for: MainRoute.self, destination: { route in
             switch(route) {
-            case .detail(id: let id):
+            case .detail:
                 AuthorizationView(viewModel: AuthorizationViewModel())
             }
             

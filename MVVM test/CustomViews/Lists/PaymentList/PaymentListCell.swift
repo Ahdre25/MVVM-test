@@ -44,7 +44,7 @@ struct PaymentListCell: View {
 
 #Preview {
     
-    let item = ShopItem(id: 0, name: "sfsfsfsd", price: 0.0, imageLink: "", isLiked: false)
+    let item = ShopItem(id: UUID(), name: "sfsfsfsd", price: 0.0, imageLink: "", isLiked: false)
     VStack {
         HStack {
             PaymentListCell(item: item, onLikeTap: {

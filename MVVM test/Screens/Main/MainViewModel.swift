@@ -16,7 +16,7 @@ final class MainViewModel: BaseViewModel {
     @Published var search: String = ""
     @Published var selectedCity: String = "Москва"
     @Published var selectedCategory: SearchCategory = .new
-    @Published var products: [ShopItem] = [ShopItem(id: 0, name: "", price: 1, imageLink: ""), ShopItem(id: 1, name: "", price: 1, imageLink: ""), ShopItem(id: 2, name: "", price: 1, imageLink: ""), ShopItem(id: 3, name: "", price: 1, imageLink: "")]
+    @Published var products: [ShopItem] = [ShopItem(id: UUID(), name: "", price: 1, imageLink: ""), ShopItem(id: UUID(), name: "", price: 1, imageLink: ""), ShopItem(id: UUID(), name: "", price: 1, imageLink: ""), ShopItem(id: UUID(), name: "", price: 1, imageLink: "")]
     var isInitialLoading: Bool = true
     
     
