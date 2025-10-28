@@ -15,10 +15,7 @@ struct MainView: View {
     var body: some View {
         NavigationStack(path: $flow.path) {
             VStack(spacing: 0) {
-                
                     VStack(spacing: 0) {
-                        
-                        
                         VStack(alignment: .leading, spacing: 0) {
                             Button(viewModel.selectedCity) {
                                 viewModel.onCityTap()
@@ -35,7 +32,6 @@ struct MainView: View {
                                 PaymentListCell(item: nil, onLikeTap: {})
                             } else {
                                 PaymentListCell(item: product, onLikeTap: {
-                                    
                                 })
                             }
                                         

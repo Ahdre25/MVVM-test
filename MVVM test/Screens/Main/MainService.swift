@@ -18,10 +18,10 @@ final class MainService: BaseService {
     var cities = ["Москва", "Санкт-Петербург", "Казань", "Новосибирск", "Екатеринбург", "Самара", "Владивосток"]
     
     var products: [ShopItem] = [
-        ShopItem(id: UUID(), name: "iPhone 16 Pro",        price: 129990, imageLink: "https://picsum.photos/600?random=1",  category: .new,     city: "Москва"),
+        ShopItem(id: UUID(), name: "iPhone 16 Pro",       price: 129990, imageLink: "https://picsum.photos/600?random=1",  category: .new,     city: "Москва"),
         ShopItem(id: UUID(), name: "MacBook Air M3",      price: 119990, imageLink: "https://picsum.photos/600?random=2",  category: .popular, city: "Санкт-Петербург"),
         ShopItem(id: UUID(), name: "AirPods Pro 2",       price: 22990,  imageLink: "https://picsum.photos/600?random=3",  category: .popular, city: "Казань"),
-        ShopItem(id: UUID(), name: "Apple Watch Ultra 2",price: 94990,  imageLink: "https://picsum.photos/600?random=4",  category: .new,     city: "Москва"),
+        ShopItem(id: UUID(), name: "Apple Watch Ultra 2", price: 94990,  imageLink: "https://picsum.photos/600?random=4",  category: .new,     city: "Москва"),
         ShopItem(id: UUID(), name: "iPad Air 5",          price: 64990,  imageLink: "https://picsum.photos/600?random=5",  category: .cheap,   city: "Новосибирск"),
         ShopItem(id: UUID(), name: "HomePod mini",        price: 9990,   imageLink: "https://picsum.photos/600?random=6",  category: .cheap,   city: "Екатеринбург"),
         ShopItem(id: UUID(), name: "Magic Keyboard",      price: 16990,  imageLink: "https://picsum.photos/600?random=7",  category: .popular, city: "Самара"),

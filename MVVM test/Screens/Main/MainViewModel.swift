@@ -17,6 +17,7 @@ final class MainViewModel: BaseViewModel {
     @Published var selectedCity: String = "Москва"
     @Published var selectedCategory: SearchCategory = .new
     @Published var products: [ShopItem] = [ShopItem(id: UUID(), name: "", price: 1, imageLink: ""), ShopItem(id: UUID(), name: "", price: 1, imageLink: ""), ShopItem(id: UUID(), name: "", price: 1, imageLink: ""), ShopItem(id: UUID(), name: "", price: 1, imageLink: "")]
+    
     var isInitialLoading: Bool = true
     
     
