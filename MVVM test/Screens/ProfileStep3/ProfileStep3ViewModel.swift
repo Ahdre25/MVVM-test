@@ -21,7 +21,7 @@ final class ProfileStep3ViewModel: BaseViewModel {
     }
     
     
-    override init() {
+    init() {
         service = ProfileStep3Service()
         super.init()
         service.delegate = self

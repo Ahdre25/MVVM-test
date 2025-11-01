@@ -8,10 +8,10 @@
 import SwiftUI
 
 enum MainRoute: Hashable {
-    case detail(id: Int)
+    case detail(id: UUID)
 }
 
 final class MainFlowModel: BaseFlowModel {
 
-    func openDetail(id: Int) { path.append(MainRoute.detail(id: id)) }
+    func openDetail(id: UUID) { path.append(MainRoute.detail(id: id)) }
 }

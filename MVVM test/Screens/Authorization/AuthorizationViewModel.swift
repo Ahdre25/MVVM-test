@@ -11,9 +11,11 @@ final class AuthorizationViewModel: BaseViewModel {
     
     
     // MARK: - Архитектура
-
-    let service: AuthorizationService!
     
+    var authFlow: AuthorizationFlowModel {
+        flowProvider as! AuthorizationFlowModel
+    }
+    let service: AuthorizationService!
     
     // MARK: - Поля для состояния UI
     
@@ -21,16 +23,15 @@ final class AuthorizationViewModel: BaseViewModel {
     @Published var password: String = ""
     @Published var isTermsChecked: Bool = false
     @Published var isPolicyChecked: Bool = false
-    
     var isActiveButton: Bool {
         isPolicyChecked && isTermsChecked && login.count > 10
     }
     
     // MARK: - функции
     
-    override init() {
+    init() {
         service = AuthorizationService()
-        super.init()
+        super.init(flowProvider: AuthorizationFlowModel())
         service.delegate = self
     }
     
@@ -44,8 +45,7 @@ final class AuthorizationViewModel: BaseViewModel {
 extension AuthorizationViewModel: AuthorizationServiceDelegate {
     func authorizationSuccess() {
         print("flow")
-        onAuthorizationSuccess?()
-        
+        authFlow.openCode(phone: "")
     }
     
     

@@ -30,7 +30,7 @@ final class MainViewModel: BaseViewModel {
     }
     
     
-    override init() {
+    init() {
         service = MainService()
         super.init()
         service.delegate = self

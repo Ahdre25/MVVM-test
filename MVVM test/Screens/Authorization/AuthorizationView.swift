@@ -14,10 +14,10 @@ import SwiftUI
 struct AuthorizationView: View {
     
     @EnvironmentObject var rootFlow: RootFlowModel
-    @StateObject var flow: AuthorizationFlowModel = AuthorizationFlowModel()
-    @ObservedObject var viewModel: AuthorizationViewModel
+    
+    @StateObject var viewModel: AuthorizationViewModel
     var body: some View {
-        NavigationStack(path: $flow.path) {
+        NavigationStack(path: $viewModel.path) {
             
             Spacer().frame(height: 30)
             VStack(alignment: .center) {
@@ -43,12 +43,7 @@ struct AuthorizationView: View {
             .lineSpacing(18)
             
             .onAppear {
-                viewModel.onAuthorizationSuccess = {
-                    withAnimation {
-                        flow.openCode(phone: viewModel.login)
-                    }
-                    
-                }
+                
             }
             .navigationDestination(for: AuthorizationRoute.self, destination: {
                 route in
@@ -57,7 +52,7 @@ struct AuthorizationView: View {
                     CodeVerificationView(viewModel: CodeVerificationViewModel(phone: phone))
                 }
             })
-        }.environmentObject(flow)
+        }.environmentObject(viewModel.authFlow)
             
     }
     

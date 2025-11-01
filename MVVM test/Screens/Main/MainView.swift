@@ -3,6 +3,7 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject var appViewModel: AppViewModel
     @EnvironmentObject var rootFlow: RootFlowModel
     @StateObject var flow: MainFlowModel = MainFlowModel()
     @StateObject var viewModel: MainViewModel
@@ -51,6 +52,8 @@ struct MainView: View {
             viewModel.onGetCitiesSuccess = { cities in
                 flow.sheet = .citySearch(cities: cities)
             }
+        }.onReceive(appViewModel.$deepLink.compactMap { $0 }) { deepLink in
+            handle(deepLink)
         }
         .sheet(item: $flow.sheet) { sheet in
             switch sheet {
@@ -60,6 +63,17 @@ struct MainView: View {
             }
         }
     }
+    
+    
+    private func handle(_ deepLink: DeepLink) {
+        switch deepLink {
+        case .product(let id):
+            flow.openDetail(id: id)
+        default:
+            break
+        }
+    }
+    
 }
 
 

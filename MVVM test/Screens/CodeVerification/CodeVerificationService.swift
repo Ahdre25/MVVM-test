@@ -17,6 +17,7 @@ final class CodeVerificationService: BaseService {
     
     
     func authorize() {
+        StorageManager.shared.token = "123"
         delegate.authorizationSuccess()
     }
     

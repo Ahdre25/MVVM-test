@@ -9,36 +9,40 @@ import SwiftUI
 
 struct RootView: View {
     
-    @ObservedObject var flow: RootFlowModel = RootFlowModel()
+    @StateObject var rootFlow: RootFlowModel = RootFlowModel()
+    @EnvironmentObject var appViewModel: AppViewModel
     
     var body: some View {
         ZStack {
+            
             VStack {
-                switch (flow.module) {
+                switch (rootFlow.module) {
                 case .authorization:
                     AuthorizationView(viewModel: AuthorizationViewModel())
                 case .main(let user):
                     TabbarView(viewModel: TabbarViewModel(user: user))
                 }
-            }.animation(.easeInOut(duration: 0.3), value: flow.cover)
+            }.animation(.easeInOut(duration: 0.3), value: rootFlow.cover)
             
-            //            .sheet(item: $flow.sheet) { sheet in
-            //                                switch sheet {
-            //                                case .filter:
-            //                                    FilterSheet()
-            //                                        .presentationDetents([.medium, .large])
-            //                                        .interactiveDismissDisabled(false)
-            //                                case .user(let user):
-            //                                    UserSheet(user: user)
-            //                                }
-            //                            }
-            if flow.cover == .profileEdit {
+            if !appViewModel.isInitialLoaded {
+                ProgressView()
+            }
+            if rootFlow.cover == .profileEdit {
                 ProfileStep1View(viewModel: ProfileStep1ViewModel()).transition(.move(edge: .trailing)).zIndex(1)
             }
+        }.task {
+            appViewModel.checkAuthorization()
+        }
+        .onChange(of: appViewModel.isAuthorized, initial: false) { oldValue, newValue in
+            withAnimation {
+                guard appViewModel.isInitialLoaded else { return }
+                rootFlow.module = newValue ? .main(user: "test") : .authorization
+            }
+            
         }
         
-        .environmentObject(flow)
-        .animation(.easeInOut(duration: 0.3), value: flow.cover)
+        .environmentObject(rootFlow)
+        .animation(.easeInOut(duration: 0.3), value: rootFlow.cover)
         
     }
         

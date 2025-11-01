@@ -52,7 +52,7 @@ final class CodeVerificationViewModel: BaseViewModel {
         $code.filter({$0.count == 6}).sink { value in
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 if self.code == "000000" {
-                    self.authorizationSuccess()
+                    self.service.authorize()
                 } else {
                     self.code = ""
                 }

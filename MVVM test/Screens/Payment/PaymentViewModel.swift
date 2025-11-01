@@ -26,7 +26,7 @@ final class PaymentViewModel: BaseViewModel {
     }
     
     
-    override init() {
+    init() {
         service = PaymentService()
         super.init()
         service.delegate = self

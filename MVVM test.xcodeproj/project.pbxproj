@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2786E82EB4E1F90096FB1B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2786E72EB4E1E60096FB1B /* StorageManager.swift */; };
+		0E2786EB2EB4E2790096FB1B /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 0E2786EA2EB4E2790096FB1B /* KeychainAccess */; };
 		0E37A85E2E86AE10001523B3 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37A85D2E86AE01001523B3 /* MainButton.swift */; };
 		0E37A8602E86D3B9001523B3 /* Appearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37A85F2E86D3B4001523B3 /* Appearence.swift */; };
 		0E50E9DA2E72F5F000308ADD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0E50E9D92E72F5F000308ADD /* Moya */; };
@@ -93,9 +95,11 @@
 		0ED0028C2EAFEA3900DFEDF2 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0028B2EAFEA3400DFEDF2 /* MainModel.swift */; };
 		0ED0028E2EAFEC3400DFEDF2 /* TypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0028D2EAFEC2D00DFEDF2 /* TypePicker.swift */; };
 		0ED002902EB00BF700DFEDF2 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0028F2EB00BED00DFEDF2 /* LikeButton.swift */; };
+		0ED002922EB1028C00DFEDF2 /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED002912EB1028600DFEDF2 /* Deeplink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E2786E72EB4E1E60096FB1B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		0E37A85D2E86AE01001523B3 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		0E37A85F2E86D3B4001523B3 /* Appearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearence.swift; sourceTree = "<group>"; };
 		0E6790B12E7AD3990029EA00 /* ProfileFlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlowModel.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 		0ED0028B2EAFEA3400DFEDF2 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		0ED0028D2EAFEC2D00DFEDF2 /* TypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePicker.swift; sourceTree = "<group>"; };
 		0ED0028F2EB00BED00DFEDF2 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		0ED002912EB1028600DFEDF2 /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +195,7 @@
 			files = (
 				0EABEBA92E954E6600A33760 /* Kingfisher in Frameworks */,
 				0E50E9DA2E72F5F000308ADD /* Moya in Frameworks */,
+				0E2786EB2EB4E2790096FB1B /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +388,7 @@
 		0E85A1622E71D4E6006490AE /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				0ED002912EB1028600DFEDF2 /* Deeplink.swift */,
 				0E37A85F2E86D3B4001523B3 /* Appearence.swift */,
 				0E8C03592E7440CE00DD4BF4 /* BaseFlowModel.swift */,
 				0E7A13412E72233000A31B00 /* BaseService.swift */,
@@ -430,6 +437,7 @@
 		0EABEBA12E8D800B00A33760 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				0E2786E72EB4E1E60096FB1B /* StorageManager.swift */,
 				0EABEBA22E8D801400A33760 /* TimerManager.swift */,
 			);
 			path = Managers;
@@ -522,6 +530,7 @@
 			packageProductDependencies = (
 				0E50E9D92E72F5F000308ADD /* Moya */,
 				0EABEBA82E954E6600A33760 /* Kingfisher */,
+				0E2786EA2EB4E2790096FB1B /* KeychainAccess */,
 			);
 			productName = "MVVM test";
 			productReference = 0E85A1452E71C777006490AE /* MVVM test.app */;
@@ -554,6 +563,7 @@
 			packageReferences = (
 				0E50E9D72E72F3A700308ADD /* XCRemoteSwiftPackageReference "Moya" */,
 				0EABEBA72E954E6600A33760 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				0E2786E92EB4E2790096FB1B /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0E85A1462E71C777006490AE /* Products */;
@@ -585,6 +595,7 @@
 				0EABEBAC2E954E7D00A33760 /* ShimmerImage.swift in Sources */,
 				0EABEB912E8BEDDC00A33760 /* Checkbox.swift in Sources */,
 				0E91C10F2E730AE2004160D6 /* AuthorizationNetwork.swift in Sources */,
+				0E2786E82EB4E1F90096FB1B /* StorageManager.swift in Sources */,
 				0E6790E52E7D987C0029EA00 /* InnerProfileStepViewModel.swift in Sources */,
 				0E6790E62E7D987C0029EA00 /* InnerProfileStepService.swift in Sources */,
 				0E6790E72E7D987C0029EA00 /* InnerProfileStepView.swift in Sources */,
@@ -611,6 +622,7 @@
 				0E7ED0142EAF947D000BA00A /* MainFlowModel.swift in Sources */,
 				0E7ED0152EAF947D000BA00A /* MainView.swift in Sources */,
 				0E6790DE2E7AFAD00029EA00 /* ProfileStep3ViewModel.swift in Sources */,
+				0ED002922EB1028C00DFEDF2 /* Deeplink.swift in Sources */,
 				0E37A8602E86D3B9001523B3 /* Appearence.swift in Sources */,
 				0EABEBB12E95562C00A33760 /* PaymentModel.swift in Sources */,
 				0E7A13592E72E56100A31B00 /* BaseNetworkModels.swift in Sources */,
@@ -871,6 +883,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0E2786E92EB4E2790096FB1B /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		0E50E9D72E72F3A700308ADD /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -890,6 +910,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0E2786EA2EB4E2790096FB1B /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E2786E92EB4E2790096FB1B /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		0E50E9D92E72F5F000308ADD /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0E50E9D72E72F3A700308ADD /* XCRemoteSwiftPackageReference "Moya" */;
