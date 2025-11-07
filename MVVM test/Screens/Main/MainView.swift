@@ -5,7 +5,8 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var appViewModel: AppViewModel
     @EnvironmentObject var rootFlow: RootFlowModel
-    @StateObject var flow: MainFlowModel = MainFlowModel()
+    @Environment(\.scenePhase) private var scenePhase
+
     @StateObject var viewModel: MainViewModel
 
     let columns = [
@@ -14,7 +15,7 @@ struct MainView: View {
         ]
     
     var body: some View {
-        NavigationStack(path: $flow.path) {
+        NavigationStack(path: $viewModel.path) {
             VStack(spacing: 0) {
                     VStack(spacing: 0) {
                         VStack(alignment: .leading, spacing: 0) {
@@ -48,14 +49,27 @@ struct MainView: View {
             
             
         }).onAppear {
+            viewModel.onFirstAppear()
             viewModel.onAppear()
-            viewModel.onGetCitiesSuccess = { cities in
-                flow.sheet = .citySearch(cities: cities)
+            print("onAppear")
+            DispatchQueue.main.async {
+                viewModel.handle(deeplink: appViewModel.deepLink)
             }
+            
         }.onReceive(appViewModel.$deepLink.compactMap { $0 }) { deepLink in
-            handle(deepLink)
+            print("deeplink: \(deepLink)")
+            if viewModel.isVisible {
+                print("onReceive")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                    viewModel.handle(deeplink: deepLink)
+                })
+//                appViewModel.deepLink = nil
+            }
         }
-        .sheet(item: $flow.sheet) { sheet in
+        .onDisappear {
+            viewModel.onDisappear()
+        }
+        .sheet(item: $viewModel.sheet) { sheet in
             switch sheet {
             case .citySearch(cities: let cities):
                 RadioListView(items: cities, selectedItem: $viewModel.selectedCity)
@@ -65,14 +79,7 @@ struct MainView: View {
     }
     
     
-    private func handle(_ deepLink: DeepLink) {
-        switch deepLink {
-        case .product(let id):
-            flow.openDetail(id: id)
-        default:
-            break
-        }
-    }
+    
     
 }
 

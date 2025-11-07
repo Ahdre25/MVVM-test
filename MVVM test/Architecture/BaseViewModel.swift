@@ -11,11 +11,34 @@ import Combine
 @MainActor
 class BaseViewModel: ObservableObject {
     
+    @Published var isVisible: Bool = false
+    
     var flowProvider: BaseFlowModel? {
         didSet {
             bindFlow()
         }
     }
+    
+    
+    private(set) var hasAppeared = false
+    
+    func onAppear() {
+        isVisible = true
+    }
+    
+    func onDisappear() {
+        isVisible = false
+    }
+    
+    func onFirstAppear() {
+    }
+    
+    func handleAppear() {
+        guard !hasAppeared else { return }
+        hasAppeared = true
+        onFirstAppear()
+    }
+    
     
     @Published var path = NavigationPath()
     @Published var sheet: SheetRoute?

@@ -12,15 +12,14 @@ enum DeepLink: Equatable {
     case none
     
     init(url: URL) {
-        guard url.scheme == "myshop" else {
+        guard url.scheme == "mvvmtest" else {
             self = .none
             return
         }
-        
-        let components = url.pathComponents.filter { $0 != "/" }
-        
-        if components.first == "product", components.count > 1,
-           let id = UUID(uuidString: components[1]) {
+        let idString = url.pathComponents.dropFirst().first
+        let id = UUID(uuidString: idString ?? "")
+        if url.host == "product",
+           let idString = url.pathComponents.dropFirst().first, let id = UUID(uuidString: idString) {
             self = .product(id: id)
         } else {
             self = .none

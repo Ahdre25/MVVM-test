@@ -100,6 +100,7 @@
 
 /* Begin PBXFileReference section */
 		0E2786E72EB4E1E60096FB1B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		0E2787BB2EB61B120096FB1B /* MVVM-test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MVVM-test-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0E37A85D2E86AE01001523B3 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		0E37A85F2E86D3B4001523B3 /* Appearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearence.swift; sourceTree = "<group>"; };
 		0E6790B12E7AD3990029EA00 /* ProfileFlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlowModel.swift; sourceTree = "<group>"; };
@@ -373,6 +374,7 @@
 		0E85A15B2E71C781006490AE /* MVVM test */ = {
 			isa = PBXGroup;
 			children = (
+				0E2787BB2EB61B120096FB1B /* MVVM-test-Info.plist */,
 				0EABEBA12E8D800B00A33760 /* Managers */,
 				0E37A85B2E86ADE1001523B3 /* CustomViews */,
 				0E85A1622E71D4E6006490AE /* Architecture */,
@@ -812,6 +814,7 @@
 				DEVELOPMENT_TEAM = 3YGVSF883N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MVVM-test-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -841,6 +844,7 @@
 				DEVELOPMENT_TEAM = 3YGVSF883N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MVVM-test-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

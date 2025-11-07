@@ -11,6 +11,9 @@ final class MainViewModel: BaseViewModel {
     
     let service: MainService!
     
+    var flow: MainFlowModel {
+        flowProvider as! MainFlowModel
+    }
     
     var onGetCitiesSuccess: (([String]) -> Void)?
     @Published var search: String = ""
@@ -24,15 +27,43 @@ final class MainViewModel: BaseViewModel {
     func onCityTap(){
         service.getCities()
     }
-    
-    func onAppear(){
+    override func onFirstAppear() {
+        super.onFirstAppear()
         service.getProducts()
     }
+    
+    override func onAppear(){
+        super.onAppear()
+    }
+    
+    
+    
+    func handle(deeplink: DeepLink?) {
+        guard let deeplink else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.check(deeplink: deeplink)
+        })
+        
+    }
+    
+    
+    private func check(deeplink: DeepLink) {
+        switch(deeplink) {
+            
+        case .product(id: let id):
+            flow.openDetail(id: id)
+            
+        case .none:
+            break
+        }
+    }
+    
+    
     
     
     init() {
         service = MainService()
-        super.init()
+        super.init(flowProvider: MainFlowModel())
         service.delegate = self
     }
     

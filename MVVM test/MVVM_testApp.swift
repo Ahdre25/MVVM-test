@@ -13,10 +13,12 @@ struct MVVM_testApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RootView().preferredColorScheme(.light).onOpenURL(perform: {
+            RootView().preferredColorScheme(.light).environmentObject(appViewModel)
+                .onOpenURL(perform: {
                 url in
+                print(url)
                 appViewModel.handleDeepLink(url: url)
-            }).environmentObject(appViewModel)
+            })
         }
     }
 }
@@ -24,7 +26,7 @@ struct MVVM_testApp: App {
 
 
 final class AppViewModel: ObservableObject {
-    @Published var deepLink: DeepLink = .none
+    @Published var deepLink: DeepLink?
     @Published var isInitialLoaded: Bool = false
     @Published var isAuthorized: Bool = false
     var onCheckAuthorizationComplete: ((Bool) -> Void)?
@@ -35,15 +37,15 @@ final class AppViewModel: ObservableObject {
     }
     
     func checkAuthorization() {
-//        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
-//            DispatchQueue.main.async() {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.async() {
                 self.isInitialLoaded = true
                 self.isAuthorized = StorageManager.shared.token != ""
                 self.onCheckAuthorizationComplete?(self.isAuthorized)
                 
-//            }
+            }
             
-//        }
+        }
     }
     
     

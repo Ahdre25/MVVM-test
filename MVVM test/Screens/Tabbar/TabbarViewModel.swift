@@ -13,11 +13,32 @@ final class TabbarViewModel: BaseViewModel {
     
     
     var onAuthorizationSuccess: (() -> Void)?
-    @Published var username: String = ""
-    @Published var password: String = ""
+    
+    @Published var selected: Int = 0
     
     func authorizationTap(){
         service.authorize()
+    }
+    
+    override func onFirstAppear() {
+        super.onFirstAppear()
+        
+    }
+    
+    func handle(deeplink: DeepLink?) {
+        guard let deeplink else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            self.check(deeplink: deeplink)
+        })
+    }
+    
+    private func check(deeplink: DeepLink) {
+        switch(deeplink) {
+        case .product:
+            selected = 0
+        case .none:
+            break
+        }
     }
     
     
